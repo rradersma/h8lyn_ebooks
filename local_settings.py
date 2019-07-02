@@ -7,10 +7,10 @@ Local Settings for a heroku_ebooks account.
 # Configuration for Twitter API
 ENABLE_TWITTER_SOURCES = True # Fetch twitter statuses as source
 ENABLE_TWITTER_POSTING = True # Tweet resulting status?
-MY_CONSUMER_KEY = 'ixTv5HbhGC1kHnMdk4ePP8for'
-MY_CONSUMER_SECRET = 'ABXnc7USZJGer3VhOx0aHrEZ1slxV8ySL2r2bMaEPTFlbfpXhO'
-MY_ACCESS_TOKEN_KEY = '1145844687086874626-KlDEU1ZQIqXERImexgLX3hjn3jQsQb'
-MY_ACCESS_TOKEN_SECRET = 'Cv15GvktveGaanYzwUb9C06Dk8JYTu7VH0X0O5ueTPMHl'
+MY_CONSUMER_KEY = environ.get('TWITTER_CONSUMER_KEY')#Your Twitter API Consumer Key set in Heroku config
+MY_CONSUMER_SECRET = environ.get('TWITTER_CONSUMER_SECRET')#Your Consumer Secret Key set in Heroku config
+MY_ACCESS_TOKEN_KEY = environ.get('TWITTER_ACCESS_TOKEN_KEY')#Your Twitter API Access Token Key set in Heroku config
+MY_ACCESS_TOKEN_SECRET = environ.get('TWITTER_ACCESS_SECRET')#Your Access Token Secret set in Heroku config
 
 # Configuration for Mastodon API
 ENABLE_MASTODON_SOURCES = False # Fetch mastodon statuses as a source?
